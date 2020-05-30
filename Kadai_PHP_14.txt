@@ -1,0 +1,26 @@
+1.データベースとテーブルの関係を説明してください。
+   ⇨データベースには様々な種類のデータが格納されており、データの種類ごとに
+　　規則正しく保存されているのが特徴である。このデータベースの種類ごとの単位を
+　　「テーブル」と呼ぶ
+
+2.テーブルを作成するときに事前にしなければならないことはなんですか？
+   ⇨カラムごとにどのようにデータを保存するかを事前に決める
+
+3.Validationはどのような役目をしていますか？
+   ⇨Modelでデータを保存する前に、フォームからデータを送信された値が正しいかどうか
+　　確認をする。
+
+4.【応用】 create_profiles_table というMigrationの雛形ファイルを作成し、
+     profiles  というテーブル名で名前(name)、性別(gender)、趣味(hobby)、自己紹介
+     (introduction)を保存できるように修正して、 migrateしてテーブルを作成しましょう。
+     ⇨database/migrations/2020_05_30_131022_crate_profile_table.phpに記載
+
+5.【応用】 Modelを作成するコマンドで Profile というModelを作成し、 名前(name)、
+     性別(gender)、趣味(hobby)、自己紹介(introduction)に対してValidationを
+     かけるようにしてみましょう。
+     ⇨app/Profile.phpに記載
+
+6.【応用】 resources/views/admin/profile/create.blade.php を開いて、
+     Validationでエラーが発生した場合にエラーが表示されるようになっているか
+     確認してみましょう。
+     ⇨エラーが表示されず、リダイレクトのみされる
